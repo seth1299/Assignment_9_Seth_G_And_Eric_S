@@ -38,3 +38,13 @@ C:\Users\se097140\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Common\ob
 C:\Users\se097140\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.csproj.CoreCompileInputs.cache
 C:\Users\se097140\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.dll
 C:\Users\se097140\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.pdb
+C:\Users\cire3\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Common\bin\Debug\netstandard2.0\Zork.Common.deps.json
+C:\Users\cire3\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Common\bin\Debug\netstandard2.0\Zork.Common.dll
+C:\Users\cire3\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Common\bin\Debug\netstandard2.0\Zork.Common.pdb
+C:\Users\cire3\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.csproj.AssemblyReference.cache
+C:\Users\cire3\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cire3\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.AssemblyInfoInputs.cache
+C:\Users\cire3\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.AssemblyInfo.cs
+C:\Users\cire3\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.csproj.CoreCompileInputs.cache
+C:\Users\cire3\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.dll
+C:\Users\cire3\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.pdb

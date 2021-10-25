@@ -29,6 +29,7 @@ namespace Zork.Builder
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Builder));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Builder_Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,8 +60,10 @@ namespace Zork.Builder
             this.Room_Name_Box = new System.Windows.Forms.MaskedTextBox();
             this.Room_Desc_Box = new System.Windows.Forms.MaskedTextBox();
             this.Neighbor_Label = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.Rooms.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -286,7 +289,7 @@ namespace Zork.Builder
             // Starting_Location_Checkbox
             // 
             this.Starting_Location_Checkbox.AutoSize = true;
-            this.Starting_Location_Checkbox.Location = new System.Drawing.Point(218, 269);
+            this.Starting_Location_Checkbox.Location = new System.Drawing.Point(218, 324);
             this.Starting_Location_Checkbox.Name = "Starting_Location_Checkbox";
             this.Starting_Location_Checkbox.Size = new System.Drawing.Size(122, 19);
             this.Starting_Location_Checkbox.TabIndex = 12;
@@ -295,16 +298,16 @@ namespace Zork.Builder
             // 
             // Room_Name_Box
             // 
-            this.Room_Name_Box.Location = new System.Drawing.Point(285, 53);
+            this.Room_Name_Box.Location = new System.Drawing.Point(212, 71);
             this.Room_Name_Box.Name = "Room_Name_Box";
             this.Room_Name_Box.Size = new System.Drawing.Size(452, 20);
             this.Room_Name_Box.TabIndex = 13;
             // 
             // Room_Desc_Box
             // 
-            this.Room_Desc_Box.Location = new System.Drawing.Point(312, 152);
+            this.Room_Desc_Box.Location = new System.Drawing.Point(215, 170);
             this.Room_Desc_Box.Name = "Room_Desc_Box";
-            this.Room_Desc_Box.Size = new System.Drawing.Size(425, 20);
+            this.Room_Desc_Box.Size = new System.Drawing.Size(449, 20);
             this.Room_Desc_Box.TabIndex = 14;
             // 
             // Neighbor_Label
@@ -316,11 +319,22 @@ namespace Zork.Builder
             this.Neighbor_Label.TabIndex = 15;
             this.Neighbor_Label.Text = "Neighbors";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(689, 31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(99, 93);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // Builder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 519);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Neighbor_Label);
             this.Controls.Add(this.Room_Desc_Box);
             this.Controls.Add(this.Room_Name_Box);
@@ -340,11 +354,12 @@ namespace Zork.Builder
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "Builder";
-            this.Text = "Zork_Builder";
+            this.Text = "♠";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.Rooms.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,6 +397,7 @@ namespace Zork.Builder
         private System.Windows.Forms.MaskedTextBox Room_Name_Box;
         private System.Windows.Forms.MaskedTextBox Room_Desc_Box;
         private System.Windows.Forms.Label Neighbor_Label;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

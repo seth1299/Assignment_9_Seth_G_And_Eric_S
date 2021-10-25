@@ -62,3 +62,4 @@ C:\Users\se097140\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\o
 C:\Users\se097140\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.csproj.CopyComplete
 C:\Users\se097140\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.exe
 C:\Users\se097140\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.pdb
+C:\Users\cire3\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.csproj.Fody.CopyLocal.cache
