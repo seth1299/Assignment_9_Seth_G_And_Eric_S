@@ -94,38 +94,36 @@ namespace Zork.Builder
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.newToolStripMenuItem.Text = "New";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem1
             // 
             this.saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
-            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(160, 22);
             this.saveToolStripMenuItem1.Text = "Save";
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.saveAsToolStripMenuItem.Text = "Save as...";
             // 
             // toolStripTextBox1
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
             this.toolStripTextBox1.Click += new System.EventHandler(this.toolStripTextBox1_Click);
             // 
             // toolStripTextBox2
             // 
-            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(100, 23);
             // 
@@ -167,7 +165,7 @@ namespace Zork.Builder
             this.North_Box.Name = "North_Box";
             this.North_Box.Size = new System.Drawing.Size(74, 64);
             this.North_Box.TabIndex = 1;
-            this.North_Box.Text = "button1";
+            this.North_Box.Text = "North";
             this.North_Box.UseVisualStyleBackColor = true;
             // 
             // East_Box
@@ -177,7 +175,7 @@ namespace Zork.Builder
             this.East_Box.Name = "East_Box";
             this.East_Box.Size = new System.Drawing.Size(74, 64);
             this.East_Box.TabIndex = 2;
-            this.East_Box.Text = "button 2";
+            this.East_Box.Text = "East";
             this.East_Box.UseVisualStyleBackColor = true;
             // 
             // West_box
@@ -187,7 +185,7 @@ namespace Zork.Builder
             this.West_box.Name = "West_box";
             this.West_box.Size = new System.Drawing.Size(74, 64);
             this.West_box.TabIndex = 3;
-            this.West_box.Text = "button3";
+            this.West_box.Text = "West";
             this.West_box.UseVisualStyleBackColor = true;
             // 
             // South_Box
@@ -197,7 +195,7 @@ namespace Zork.Builder
             this.South_Box.Name = "South_Box";
             this.South_Box.Size = new System.Drawing.Size(74, 64);
             this.South_Box.TabIndex = 4;
-            this.South_Box.Text = "button4";
+            this.South_Box.Text = "South";
             this.South_Box.UseVisualStyleBackColor = true;
             // 
             // Rooms

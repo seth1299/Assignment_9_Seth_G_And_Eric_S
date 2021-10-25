@@ -216,7 +216,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ER247979\\.nuget\\packages\\": {},
+    "C:\\Users\\se097140\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
@@ -224,11 +224,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ER247979\\Documents\\GitHub\\Assignment_9_Seth_G_And_Eric_S\\Zork.Common\\Zork.Common.csproj",
+      "projectUniqueName": "C:\\Users\\se097140\\Documents\\GitHub\\Assignment_9_Seth_G_And_Eric_S\\Zork.Common\\Zork.Common.csproj",
       "projectName": "Zork.Common",
-      "projectPath": "C:\\Users\\ER247979\\Documents\\GitHub\\Assignment_9_Seth_G_And_Eric_S\\Zork.Common\\Zork.Common.csproj",
-      "packagesPath": "C:\\Users\\ER247979\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ER247979\\Documents\\GitHub\\Assignment_9_Seth_G_And_Eric_S\\Zork.Common\\obj\\",
+      "projectPath": "C:\\Users\\se097140\\Documents\\GitHub\\Assignment_9_Seth_G_And_Eric_S\\Zork.Common\\Zork.Common.csproj",
+      "packagesPath": "C:\\Users\\se097140\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\se097140\\Documents\\GitHub\\Assignment_9_Seth_G_And_Eric_S\\Zork.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -236,7 +236,7 @@
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ER247979\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\se097140\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
