@@ -36,3 +36,16 @@ C:\Users\cire3\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\
 C:\Users\cire3\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.csproj.CopyComplete
 C:\Users\cire3\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.exe
 C:\Users\cire3\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.pdb
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\bin\Debug\Zork.Builder.exe.config
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\bin\Debug\Zork.Builder.exe
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\bin\Debug\Zork.Builder.pdb
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\bin\Debug\Zork.Common.dll
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\bin\Debug\Zork.Common.pdb
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.csproj.AssemblyReference.cache
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.Builder.resources
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.Properties.Resources.resources
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.csproj.GenerateResource.cache
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.csproj.CoreCompileInputs.cache
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.csproj.CopyComplete
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.exe
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.pdb
