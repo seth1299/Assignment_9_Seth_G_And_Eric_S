@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2Pxc+g0JWO5hVG84DLhkZtYMDev+BG9PFDpq+HtUqeSHIaW3EjPkvUnUVpn7ZUwLq2lBd6JDWAX++Uk8KCVc6A==",
+  "dgSpecHash": "ZdqxowhfCn2rvLWsVfqOWgSpm+GwH4WG5KOtSl5OQY4goAl3GiP9/PJ3oyHqK2NOqg5Q2S+IMmjRvrwaaMe6iw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cire3\\Documents\\GitHub\\Zork\\Zork.Common\\Zork.Common.csproj",
+  "projectFilePath": "C:\\Users\\cire3\\Documents\\GitHub\\Assignment_9_Seth_G_And_Eric_S\\Zork.Common\\Zork.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cire3\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\cire3\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
