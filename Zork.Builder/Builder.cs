@@ -45,7 +45,17 @@ namespace Zork.Builder
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          // box.Show("Are you sure you want to quit?");
+            const string message = "Do you want to quit Zork Builder?";
+            const string caption = "The adventure must continue!";
+            var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
