@@ -1,7 +1,7 @@
 ﻿
 namespace Zork.Builder
 {
-    partial class Builder
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,14 @@ namespace Zork.Builder
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Builder));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.MenuStrip menuStrip1;
+            System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+            System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+            System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem1;
+            System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.Builder_Menu = new System.Windows.Forms.ToolStripMenuItem();
-            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +51,7 @@ namespace Zork.Builder
             this.Rooms = new System.Windows.Forms.GroupBox();
             this.Room_Scroll = new System.Windows.Forms.VScrollBar();
             this.World_Rooms = new System.Windows.Forms.ListBox();
+            this.playersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Remove = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -61,100 +63,109 @@ namespace Zork.Builder
             this.Room_Desc_Box = new System.Windows.Forms.MaskedTextBox();
             this.Neighbor_Label = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.menuStrip1.SuspendLayout();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            menuStrip1 = new System.Windows.Forms.MenuStrip();
+            newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             this.Rooms.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Builder_Menu,
             this.editToolStripMenuItem,
             this.saveToolStripMenuItem,
             this.loadToolStripMenuItem,
             this.quitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.Location = new System.Drawing.Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new System.Drawing.Size(800, 28);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
             // 
             // Builder_Menu
             // 
             this.Builder_Menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripMenuItem,
-            this.openToolStripMenuItem,
-            this.saveToolStripMenuItem1,
-            this.saveAsToolStripMenuItem,
+            newToolStripMenuItem,
+            openToolStripMenuItem,
+            saveToolStripMenuItem1,
+            saveAsToolStripMenuItem,
             this.toolStripTextBox1,
             this.toolStripTextBox2});
             this.Builder_Menu.Name = "Builder_Menu";
-            this.Builder_Menu.Size = new System.Drawing.Size(37, 20);
+            this.Builder_Menu.Size = new System.Drawing.Size(46, 24);
             this.Builder_Menu.Text = "File";
             this.Builder_Menu.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // newToolStripMenuItem
             // 
-            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.newToolStripMenuItem.Text = "New";
+            newToolStripMenuItem.Name = "newToolStripMenuItem";
+            newToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            newToolStripMenuItem.Text = "New";
+            newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.openToolStripMenuItem.Text = "Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            openToolStripMenuItem.Name = "openToolStripMenuItem";
+            openToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            openToolStripMenuItem.Text = "Open";
+            openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem1
             // 
-            this.saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
-            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.saveToolStripMenuItem1.Text = "Save";
+            saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
+            saveToolStripMenuItem1.Size = new System.Drawing.Size(174, 26);
+            saveToolStripMenuItem1.Text = "Save";
             // 
             // saveAsToolStripMenuItem
             // 
-            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.saveAsToolStripMenuItem.Text = "Save as...";
+            saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            saveAsToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            saveAsToolStripMenuItem.Text = "Save as...";
             // 
             // toolStripTextBox1
             // 
             this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 27);
             this.toolStripTextBox1.Click += new System.EventHandler(this.toolStripTextBox1_Click);
             // 
             // toolStripTextBox2
             // 
             this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 27);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(56, 24);
             this.loadToolStripMenuItem.Text = "Load";
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
@@ -228,13 +239,20 @@ namespace Zork.Builder
             // 
             // World_Rooms
             // 
+            this.World_Rooms.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.playersBindingSource, "Location.Name", true));
+            this.World_Rooms.DataSource = this.playersBindingSource;
+            this.World_Rooms.DisplayMember = "LocationName";
             this.World_Rooms.FormattingEnabled = true;
-            this.World_Rooms.ItemHeight = 15;
+            this.World_Rooms.ItemHeight = 17;
             this.World_Rooms.Location = new System.Drawing.Point(6, 22);
             this.World_Rooms.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.World_Rooms.Name = "World_Rooms";
-            this.World_Rooms.Size = new System.Drawing.Size(188, 394);
+            this.World_Rooms.Size = new System.Drawing.Size(188, 378);
             this.World_Rooms.TabIndex = 6;
+            // 
+            // playersBindingSource
+            // 
+            this.playersBindingSource.DataSource = typeof(Zork.Player);
             // 
             // Remove
             // 
@@ -274,7 +292,7 @@ namespace Zork.Builder
             this.Room_Name_Label.AutoSize = true;
             this.Room_Name_Label.Location = new System.Drawing.Point(212, 53);
             this.Room_Name_Label.Name = "Room_Name_Label";
-            this.Room_Name_Label.Size = new System.Drawing.Size(67, 15);
+            this.Room_Name_Label.Size = new System.Drawing.Size(75, 17);
             this.Room_Name_Label.TabIndex = 9;
             this.Room_Name_Label.Text = "Room Name:";
             this.Room_Name_Label.Click += new System.EventHandler(this.label1_Click);
@@ -284,7 +302,7 @@ namespace Zork.Builder
             this.Room_Description_Label.AutoSize = true;
             this.Room_Description_Label.Location = new System.Drawing.Point(212, 152);
             this.Room_Description_Label.Name = "Room_Description_Label";
-            this.Room_Description_Label.Size = new System.Drawing.Size(94, 15);
+            this.Room_Description_Label.Size = new System.Drawing.Size(107, 17);
             this.Room_Description_Label.TabIndex = 10;
             this.Room_Description_Label.Text = "Room Description:";
             // 
@@ -293,7 +311,7 @@ namespace Zork.Builder
             this.Starting_Location_Checkbox.AutoSize = true;
             this.Starting_Location_Checkbox.Location = new System.Drawing.Point(218, 324);
             this.Starting_Location_Checkbox.Name = "Starting_Location_Checkbox";
-            this.Starting_Location_Checkbox.Size = new System.Drawing.Size(122, 19);
+            this.Starting_Location_Checkbox.Size = new System.Drawing.Size(142, 21);
             this.Starting_Location_Checkbox.TabIndex = 12;
             this.Starting_Location_Checkbox.Text = "Is Starting Location?";
             this.Starting_Location_Checkbox.UseVisualStyleBackColor = true;
@@ -302,14 +320,14 @@ namespace Zork.Builder
             // 
             this.Room_Name_Box.Location = new System.Drawing.Point(212, 71);
             this.Room_Name_Box.Name = "Room_Name_Box";
-            this.Room_Name_Box.Size = new System.Drawing.Size(452, 20);
+            this.Room_Name_Box.Size = new System.Drawing.Size(452, 23);
             this.Room_Name_Box.TabIndex = 13;
             // 
             // Room_Desc_Box
             // 
             this.Room_Desc_Box.Location = new System.Drawing.Point(215, 170);
             this.Room_Desc_Box.Name = "Room_Desc_Box";
-            this.Room_Desc_Box.Size = new System.Drawing.Size(449, 20);
+            this.Room_Desc_Box.Size = new System.Drawing.Size(449, 23);
             this.Room_Desc_Box.TabIndex = 14;
             // 
             // Neighbor_Label
@@ -317,7 +335,7 @@ namespace Zork.Builder
             this.Neighbor_Label.AutoSize = true;
             this.Neighbor_Label.Location = new System.Drawing.Point(641, 408);
             this.Neighbor_Label.Name = "Neighbor_Label";
-            this.Neighbor_Label.Size = new System.Drawing.Size(55, 15);
+            this.Neighbor_Label.Size = new System.Drawing.Size(63, 17);
             this.Neighbor_Label.TabIndex = 15;
             this.Neighbor_Label.Text = "Neighbors";
             // 
@@ -331,9 +349,13 @@ namespace Zork.Builder
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // Builder
+            // openFileDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
+            this.openFileDialog.FileName = "openFileDialog";
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 519);
@@ -350,21 +372,22 @@ namespace Zork.Builder
             this.Controls.Add(this.West_box);
             this.Controls.Add(this.East_Box);
             this.Controls.Add(this.North_Box);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
-            this.Name = "Builder";
+            this.Name = "MainForm";
             this.Text = "Zork Builder";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             this.Rooms.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -372,13 +395,8 @@ namespace Zork.Builder
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.OpenFileDialog FileOpen;
         private System.Windows.Forms.ToolStripMenuItem Builder_Menu;
-        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
@@ -387,7 +405,6 @@ namespace Zork.Builder
         private System.Windows.Forms.Button East_Box;
         private System.Windows.Forms.Button West_box;
         private System.Windows.Forms.Button South_Box;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.GroupBox Rooms;
         private System.Windows.Forms.ListBox World_Rooms;
         private System.Windows.Forms.Button Remove;
@@ -404,6 +421,8 @@ namespace Zork.Builder
         private System.Windows.Forms.MaskedTextBox Room_Desc_Box;
         private System.Windows.Forms.Label Neighbor_Label;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.BindingSource playersBindingSource;
     }
 }
 

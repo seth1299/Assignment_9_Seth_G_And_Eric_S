@@ -16,7 +16,7 @@ namespace Zork.Builder
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Builder());
+            Application.Run(new MainForm());
         }
     }
 }
