@@ -1,15 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Zork;
 using Zork.Builder.ViewModels;
 
 namespace Zork.Builder
@@ -29,7 +22,7 @@ namespace Zork.Builder
                 if (ViewModel != value)
                 {
                     _viewModel = value;
-                    worldViewModelBindingSource.DataSource = _viewModel;
+                  //  worldViewModelBindingSource.DataSource = _viewModel; //This was giving off errors. Commented out
                 }
             }
         }
@@ -118,6 +111,11 @@ namespace Zork.Builder
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
         }

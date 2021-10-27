@@ -42,11 +42,9 @@ C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\b
 C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\bin\Debug\Zork.Common.dll
 C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\bin\Debug\Zork.Common.pdb
 C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.csproj.AssemblyReference.cache
-C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.Builder.resources
 C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.Properties.Resources.resources
 C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.csproj.GenerateResource.cache
 C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.csproj.CoreCompileInputs.cache
-C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.csproj.CopyComplete
 C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.exe
 C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.pdb
 C:\Users\se097140\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\bin\Debug\Zork.Builder.exe.config
@@ -79,3 +77,7 @@ C:\Users\sethg\Desktop\Folders\Repos\Assignment9_Zork_Builder\Assignment_9_Seth_
 C:\Users\sethg\Desktop\Folders\Repos\Assignment9_Zork_Builder\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.csproj.CopyComplete
 C:\Users\sethg\Desktop\Folders\Repos\Assignment9_Zork_Builder\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\bin\Debug\Newtonsoft.Json.dll
 C:\Users\sethg\Desktop\Folders\Repos\Assignment9_Zork_Builder\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.MainForm.resources
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ER247979\Documents\GitHub\Assignment_9_Seth_G_And_Eric_S\Zork.Builder\obj\Debug\Zork.Builder.csproj.Fody.CopyLocal.cache
