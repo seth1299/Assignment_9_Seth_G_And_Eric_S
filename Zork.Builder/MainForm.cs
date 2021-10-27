@@ -9,8 +9,7 @@ namespace Zork.Builder
 {
     public partial class MainForm : Form
     {
-
-        //internal WorldViewModel ViewModel { get; private set; }
+        #region Global Variable declarations
 
         private WorldViewModel _viewModel;
 
@@ -27,11 +26,19 @@ namespace Zork.Builder
             }
         }
 
+        #endregion
 
         public MainForm()
         {
             InitializeComponent();
             ViewModel = new WorldViewModel();
+
+            /*
+            _worldDependentControls = new Control[]
+            {
+                addPlayerButton;
+            }
+            */
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -51,7 +58,6 @@ namespace Zork.Builder
                 string jsonString = File.ReadAllText(openFileDialog.FileName);
                 ViewModel.World = JsonConvert.DeserializeObject<World>(jsonString);
             }
-            MessageBox.Show("Not yet implemented.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Add_Click(object sender, EventArgs e)
@@ -112,12 +118,26 @@ namespace Zork.Builder
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Not yet implemented.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void saveToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Not yet implemented.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string filename ="TestFile.json";
+
+            _viewModel.SaveWorld(filename);
+
+            MessageBox.Show("Not yet implemented.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not yet implemented.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
