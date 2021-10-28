@@ -139,5 +139,30 @@ namespace Zork.Builder
         {
             MessageBox.Show("Not yet implemented.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void Room_Desc_Box_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void Build_File_Button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not yet implemented.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void Remove_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not yet implemented.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void Add_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not yet implemented.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

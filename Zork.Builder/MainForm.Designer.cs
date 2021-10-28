@@ -35,10 +35,10 @@ namespace Zork.Builder
             System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
             System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem1;
             System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.Label welcomeMessageLabel;
             System.Windows.Forms.Label ExitMessageLabel;
             System.Windows.Forms.Label InvalidCommandMessageTextBox;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.Builder_Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,9 +68,10 @@ namespace Zork.Builder
             this.East_Box = new System.Windows.Forms.Button();
             this.North_Box = new System.Windows.Forms.Button();
             this.miscTabPage = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.ExitMessageTextBox = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ExitMessageTextBox = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             menuStrip1 = new System.Windows.Forms.MenuStrip();
             newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,10 +87,12 @@ namespace Zork.Builder
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Rooms.SuspendLayout();
             this.miscTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Builder_Menu,
@@ -167,6 +170,7 @@ namespace Zork.Builder
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
             this.loadToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.loadToolStripMenuItem.Text = "Load";
+            this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // quitToolStripMenuItem
             // 
@@ -174,6 +178,33 @@ namespace Zork.Builder
             this.quitToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
+            // 
+            // welcomeMessageLabel
+            // 
+            welcomeMessageLabel.AutoSize = true;
+            welcomeMessageLabel.Location = new System.Drawing.Point(4, 7);
+            welcomeMessageLabel.Name = "welcomeMessageLabel";
+            welcomeMessageLabel.Size = new System.Drawing.Size(91, 15);
+            welcomeMessageLabel.TabIndex = 0;
+            welcomeMessageLabel.Text = "Welcome Message";
+            // 
+            // ExitMessageLabel
+            // 
+            ExitMessageLabel.AutoSize = true;
+            ExitMessageLabel.Location = new System.Drawing.Point(6, 49);
+            ExitMessageLabel.Name = "ExitMessageLabel";
+            ExitMessageLabel.Size = new System.Drawing.Size(66, 15);
+            ExitMessageLabel.TabIndex = 2;
+            ExitMessageLabel.Text = "Exit Message";
+            // 
+            // InvalidCommandMessageTextBox
+            // 
+            InvalidCommandMessageTextBox.AutoSize = true;
+            InvalidCommandMessageTextBox.Location = new System.Drawing.Point(4, 91);
+            InvalidCommandMessageTextBox.Name = "InvalidCommandMessageTextBox";
+            InvalidCommandMessageTextBox.Size = new System.Drawing.Size(131, 15);
+            InvalidCommandMessageTextBox.TabIndex = 4;
+            InvalidCommandMessageTextBox.Text = "Invalid Command Message";
             // 
             // FileOpen
             // 
@@ -246,6 +277,7 @@ namespace Zork.Builder
             this.Room_Desc_Box.Name = "Room_Desc_Box";
             this.Room_Desc_Box.Size = new System.Drawing.Size(449, 20);
             this.Room_Desc_Box.TabIndex = 27;
+            this.Room_Desc_Box.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.Room_Desc_Box_MaskInputRejected);
             // 
             // Room_Name_Box
             // 
@@ -291,6 +323,7 @@ namespace Zork.Builder
             this.Build_File_Button.TabIndex = 22;
             this.Build_File_Button.Text = "Build Zork File";
             this.Build_File_Button.UseVisualStyleBackColor = true;
+            this.Build_File_Button.Click += new System.EventHandler(this.Build_File_Button_Click);
             // 
             // Rooms
             // 
@@ -336,6 +369,7 @@ namespace Zork.Builder
             this.Remove.TabIndex = 7;
             this.Remove.Text = "Remove";
             this.Remove.UseVisualStyleBackColor = true;
+            this.Remove.Click += new System.EventHandler(this.Remove_Click_1);
             // 
             // Add
             // 
@@ -346,6 +380,7 @@ namespace Zork.Builder
             this.Add.TabIndex = 6;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click_1);
             // 
             // South_Box
             // 
@@ -389,6 +424,7 @@ namespace Zork.Builder
             // 
             // miscTabPage
             // 
+            this.miscTabPage.Controls.Add(this.pictureBox2);
             this.miscTabPage.Controls.Add(this.textBox2);
             this.miscTabPage.Controls.Add(InvalidCommandMessageTextBox);
             this.miscTabPage.Controls.Add(this.ExitMessageTextBox);
@@ -403,21 +439,12 @@ namespace Zork.Builder
             this.miscTabPage.Text = "Misc";
             this.miscTabPage.UseVisualStyleBackColor = true;
             // 
-            // welcomeMessageLabel
+            // textBox2
             // 
-            welcomeMessageLabel.AutoSize = true;
-            welcomeMessageLabel.Location = new System.Drawing.Point(4, 7);
-            welcomeMessageLabel.Name = "welcomeMessageLabel";
-            welcomeMessageLabel.Size = new System.Drawing.Size(91, 15);
-            welcomeMessageLabel.TabIndex = 0;
-            welcomeMessageLabel.Text = "Welcome Message";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(7, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBox2.Location = new System.Drawing.Point(7, 110);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(128, 20);
+            this.textBox2.TabIndex = 5;
             // 
             // ExitMessageTextBox
             // 
@@ -426,30 +453,23 @@ namespace Zork.Builder
             this.ExitMessageTextBox.Size = new System.Drawing.Size(126, 20);
             this.ExitMessageTextBox.TabIndex = 3;
             // 
-            // ExitMessageLabel
+            // textBox1
             // 
-            ExitMessageLabel.AutoSize = true;
-            ExitMessageLabel.Location = new System.Drawing.Point(6, 49);
-            ExitMessageLabel.Name = "ExitMessageLabel";
-            ExitMessageLabel.Size = new System.Drawing.Size(66, 15);
-            ExitMessageLabel.TabIndex = 2;
-            ExitMessageLabel.Text = "Exit Message";
+            this.textBox1.Location = new System.Drawing.Point(7, 26);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(128, 20);
+            this.textBox1.TabIndex = 1;
             // 
-            // textBox2
+            // pictureBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(7, 110);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(128, 20);
-            this.textBox2.TabIndex = 5;
-            // 
-            // InvalidCommandMessageTextBox
-            // 
-            InvalidCommandMessageTextBox.AutoSize = true;
-            InvalidCommandMessageTextBox.Location = new System.Drawing.Point(4, 91);
-            InvalidCommandMessageTextBox.Name = "InvalidCommandMessageTextBox";
-            InvalidCommandMessageTextBox.Size = new System.Drawing.Size(131, 15);
-            InvalidCommandMessageTextBox.TabIndex = 4;
-            InvalidCommandMessageTextBox.Text = "Invalid Command Message";
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(604, 288);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(192, 183);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // MainForm
             // 
@@ -480,6 +500,7 @@ namespace Zork.Builder
             this.Rooms.ResumeLayout(false);
             this.miscTabPage.ResumeLayout(false);
             this.miscTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -518,6 +539,7 @@ namespace Zork.Builder
         private System.Windows.Forms.TextBox ExitMessageTextBox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
