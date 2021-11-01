@@ -56,7 +56,7 @@ namespace Zork.Builder
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string jsonString = File.ReadAllText(openFileDialog.FileName);
-                ViewModel.World = JsonConvert.DeserializeObject<World>(jsonString);
+                ViewModel.World = JsonConvert.DeserializeObject<World>(jsonString); //unhandled 
             }
         }
 
@@ -161,6 +161,11 @@ namespace Zork.Builder
         }
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void North_Box_Click(object sender, EventArgs e)
         {
 
         }

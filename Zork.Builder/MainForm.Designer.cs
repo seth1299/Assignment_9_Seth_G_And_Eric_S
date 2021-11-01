@@ -68,10 +68,11 @@ namespace Zork.Builder
             this.East_Box = new System.Windows.Forms.Button();
             this.North_Box = new System.Windows.Forms.Button();
             this.miscTabPage = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.ExitMessageTextBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             menuStrip1 = new System.Windows.Forms.MenuStrip();
             newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -88,6 +89,7 @@ namespace Zork.Builder
             this.Rooms.SuspendLayout();
             this.miscTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -274,6 +276,8 @@ namespace Zork.Builder
             // Room_Desc_Box
             // 
             this.Room_Desc_Box.Location = new System.Drawing.Point(205, 137);
+            this.Room_Desc_Box.MaximumSize = new System.Drawing.Size(449, 150);
+            this.Room_Desc_Box.MinimumSize = new System.Drawing.Size(449, 150);
             this.Room_Desc_Box.Name = "Room_Desc_Box";
             this.Room_Desc_Box.Size = new System.Drawing.Size(449, 20);
             this.Room_Desc_Box.TabIndex = 27;
@@ -421,6 +425,7 @@ namespace Zork.Builder
             this.North_Box.TabIndex = 17;
             this.North_Box.Text = "North";
             this.North_Box.UseVisualStyleBackColor = true;
+            this.North_Box.Click += new System.EventHandler(this.North_Box_Click);
             // 
             // miscTabPage
             // 
@@ -438,6 +443,17 @@ namespace Zork.Builder
             this.miscTabPage.TabIndex = 1;
             this.miscTabPage.Text = "Misc";
             this.miscTabPage.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(604, 288);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(192, 183);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // textBox2
             // 
@@ -460,16 +476,10 @@ namespace Zork.Builder
             this.textBox1.Size = new System.Drawing.Size(128, 20);
             this.textBox1.TabIndex = 1;
             // 
-            // pictureBox2
+            // fileSystemWatcher1
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(604, 288);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(192, 183);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
             // 
             // MainForm
             // 
@@ -501,6 +511,7 @@ namespace Zork.Builder
             this.miscTabPage.ResumeLayout(false);
             this.miscTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -540,6 +551,7 @@ namespace Zork.Builder
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }
 

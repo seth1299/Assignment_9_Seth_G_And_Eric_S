@@ -19,7 +19,7 @@ namespace Zork
         [OnDeserialized]
         private void OnDeserialized(StreamingContext context)
         {
-            mRoomsByName = Rooms.ToDictionary(room => room.Name, room => room);
+            mRoomsByName = Rooms.ToDictionary(room => room.Name, room => room); //unhandled
 
             foreach (Room room in Rooms)
             {
