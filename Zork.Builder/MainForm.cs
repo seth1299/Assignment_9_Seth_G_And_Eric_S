@@ -167,7 +167,26 @@ namespace Zork.Builder
 
         private void North_Box_Click(object sender, EventArgs e)
         {
+            NeighborForm f2 = new NeighborForm();
+            f2.ShowDialog();
+        }
 
+        private void West_box_Click(object sender, EventArgs e)
+        {
+            NeighborForm f2 = new NeighborForm();
+            f2.ShowDialog();
+        }
+
+        private void South_Box_Click(object sender, EventArgs e)
+        {
+            NeighborForm f2 = new NeighborForm();
+            f2.ShowDialog();
+        }
+
+        private void East_Box_Click(object sender, EventArgs e)
+        {
+            NeighborForm f2 = new NeighborForm();
+            f2.ShowDialog();
         }
     }
 }

@@ -395,6 +395,7 @@ namespace Zork.Builder
             this.South_Box.TabIndex = 20;
             this.South_Box.Text = "South";
             this.South_Box.UseVisualStyleBackColor = true;
+            this.South_Box.Click += new System.EventHandler(this.South_Box_Click);
             // 
             // West_box
             // 
@@ -405,6 +406,7 @@ namespace Zork.Builder
             this.West_box.TabIndex = 19;
             this.West_box.Text = "West";
             this.West_box.UseVisualStyleBackColor = true;
+            this.West_box.Click += new System.EventHandler(this.West_box_Click);
             // 
             // East_Box
             // 
@@ -415,6 +417,7 @@ namespace Zork.Builder
             this.East_Box.TabIndex = 18;
             this.East_Box.Text = "East";
             this.East_Box.UseVisualStyleBackColor = true;
+            this.East_Box.Click += new System.EventHandler(this.East_Box_Click);
             // 
             // North_Box
             // 
