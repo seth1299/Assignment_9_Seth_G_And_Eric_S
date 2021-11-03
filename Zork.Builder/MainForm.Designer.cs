@@ -388,6 +388,7 @@ namespace Zork.Builder
             // 
             // South_Box
             // 
+            this.South_Box.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.South_Box.Location = new System.Drawing.Point(627, 400);
             this.South_Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.South_Box.Name = "South_Box";
@@ -399,6 +400,7 @@ namespace Zork.Builder
             // 
             // West_box
             // 
+            this.West_box.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.West_box.Location = new System.Drawing.Point(543, 341);
             this.West_box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.West_box.Name = "West_box";
@@ -410,6 +412,7 @@ namespace Zork.Builder
             // 
             // East_Box
             // 
+            this.East_Box.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.East_Box.Location = new System.Drawing.Point(710, 341);
             this.East_Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.East_Box.Name = "East_Box";

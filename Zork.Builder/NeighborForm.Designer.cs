@@ -70,6 +70,7 @@ namespace Zork.Builder
             this.Controls.Add(this.Neighbor_Dropdown);
             this.Controls.Add(this.NeighborFormLabel);
             this.Name = "NeighborForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "NeighborForm";
             this.ResumeLayout(false);
             this.PerformLayout();
