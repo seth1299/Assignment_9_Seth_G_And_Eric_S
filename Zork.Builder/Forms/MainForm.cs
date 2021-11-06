@@ -3,6 +3,7 @@ using System;
 using System.ComponentModel;
 using System.IO;
 using System.Windows.Forms;
+using Zork.Builder.Forms;
 using Zork.Builder.ViewModels;
 
 namespace Zork.Builder
@@ -18,27 +19,27 @@ namespace Zork.Builder
             get => _viewModel;
             set
             {
-                if (ViewModel != value)
+                if (_viewModel != value)
                 {
                     _viewModel = value;
-                  //  worldViewModelBindingSource.DataSource = _viewModel; //This was giving off errors. Commented out
+                    roomsBindingSource.DataSource = _viewModel;
                 }
             }
         }
 
+        NeighborForm f2 = new NeighborForm();
+
         #endregion
 
+        private void ShowErrorMessage(string s)
+        {
+            MessageBox.Show(s, "Zork Builder - ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        
         public MainForm()
         {
             InitializeComponent();
             ViewModel = new WorldViewModel();
-
-            /*
-            _worldDependentControls = new Control[]
-            {
-                addPlayerButton;
-            }
-            */
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -56,13 +57,51 @@ namespace Zork.Builder
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string jsonString = File.ReadAllText(openFileDialog.FileName);
-                ViewModel.World = JsonConvert.DeserializeObject<World>(jsonString); //unhandled 
+                try
+                {
+                    ViewModel.World = JsonConvert.DeserializeObject<World>(jsonString);
+                    Add.Enabled = true;
+                    Remove.Enabled = true;
+                    North_Box.Enabled = true;
+                    South_Box.Enabled = true;
+                    East_Box.Enabled = true;
+                    West_box.Enabled = true;
+                    Starting_Location_Checkbox.Enabled = true;
+                    Room_Name_Box.Enabled = true;                    
+                    Room_Desc_Box.Enabled = true;
+                    Build_File_Button.Enabled = true;
+                }
+                catch (Exception exception)
+                {
+                    ShowErrorMessage($"{exception} occured while attempting to open \"{openFileDialog.FileName}\"");
+                }
             }
         }
 
-        private void Add_Click(object sender, EventArgs e)
+        private void Add_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("Not yet implemented.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            using (Add_Room AddRoom = new Add_Room())
+            {
+                if (AddRoom.ShowDialog() == DialogResult.OK)
+                {
+                    if (string.IsNullOrEmpty(AddRoom.RoomName) || string.IsNullOrEmpty(AddRoom.RoomDescription))
+                    {
+                        ShowErrorMessage("Room name or description is empty.");
+                    }
+
+                    Room room = new Room { Name = AddRoom.RoomName, Description = AddRoom.RoomDescription };
+
+                    try
+                    {
+                        _viewModel.Rooms.Add(room);
+                    }
+                    catch(Exception exception)
+                    {
+                        ShowErrorMessage($"{exception} occured when attempting to add a room to the Rooms List.");
+                    }
+                    
+                }
+            }
         }
 
         private void Remove_Click(object sender, EventArgs e)
@@ -74,8 +113,8 @@ namespace Zork.Builder
         {
             const string message = "Do you want to quit Zork Builder?";
             const string caption = "The adventure must continue!";
-            var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+
+            if (MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -83,27 +122,23 @@ namespace Zork.Builder
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not yet implemented.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-            
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string jsonString = File.ReadAllText(openFileDialog.FileName);
+                try
+                {
+                    ViewModel.World = JsonConvert.DeserializeObject<World>(jsonString);
+                }
+                catch (Exception exception)
+                {
+                    ShowErrorMessage($"{exception} occured while attempting to open \"{openFileDialog.FileName}\"");
+                }
+            }
         }
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Not yet implemented.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -128,21 +163,12 @@ namespace Zork.Builder
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string filename ="TestFile.json";
-
-            _viewModel.SaveWorld(filename);
-
             MessageBox.Show("Not yet implemented.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Not yet implemented.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void Room_Desc_Box_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
         }
 
         private void Build_File_Button_Click(object sender, EventArgs e)
@@ -155,38 +181,31 @@ namespace Zork.Builder
             MessageBox.Show("Not yet implemented.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void Add_Click_1(object sender, EventArgs e)
+        private void editToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("Not yet implemented.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void North_Box_Click(object sender, EventArgs e)
         {
-            NeighborForm f2 = new NeighborForm();
             f2.ShowDialog();
         }
 
         private void West_box_Click(object sender, EventArgs e)
         {
-            NeighborForm f2 = new NeighborForm();
             f2.ShowDialog();
         }
 
         private void South_Box_Click(object sender, EventArgs e)
         {
-            NeighborForm f2 = new NeighborForm();
             f2.ShowDialog();
         }
 
         private void East_Box_Click(object sender, EventArgs e)
         {
-            NeighborForm f2 = new NeighborForm();
             f2.ShowDialog();
         }
+
+        
     }
 }

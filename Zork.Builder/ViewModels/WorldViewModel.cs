@@ -2,16 +2,19 @@
 using System;
 using System.ComponentModel;
 using System.IO;
+using System.Windows.Forms;
 
-namespace Zork.Builder.ViewModels
+namespace Zork.Builder.ViewModels 
 {
-    internal class WorldViewModel
+    internal class WorldViewModel : INotifyPropertyChanged
     {
-        public BindingList<Player> Players { get; set; }
+        public BindingList<Room> Rooms { get; set; }
 
         private World _world;
 
         private bool IsWorldLoaded;
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public World World
         {
@@ -20,13 +23,15 @@ namespace Zork.Builder.ViewModels
                 if (_world != value)
                 {
                     _world = value;
-                    if (_world != null)
+
+                    if (_world != null && _world.Rooms != null)
                     {
-                        Players = new BindingList<Player>(_world.Players);
+                        Rooms = new BindingList<Room>(_world.Rooms);
                     }
-                    else
+                    else if ( _world.Rooms == null )
                     {
-                        Players = new BindingList<Player>(Array.Empty<Player>());
+                        MessageBox.Show("There are no Rooms in this file, so an empty array of rooms has been created.", "Zork Builder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Rooms = new BindingList<Room>(Array.Empty<Room>());
                     }
                 }
             }
